@@ -2,14 +2,23 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './landingPage.css';
 
+import ReactPlayer from 'react-player';
+
 //sdtyled components
-import { S2div, PreBookButton, H1, P1, S5div } from './styledcomponent';
+import { S2div, PreBookButton, H1, P1, S5div, P2, Wrapper7, Wrapper11 } from './styledcomponent';
 
 //images
 import s2 from './images/s2.svg';
 import s3 from './images/s3.svg';
 import s4 from './images/s4.svg';
 import s5 from './images/s5.svg';
+import s6 from './images/s6.svg';
+import s11 from './images/s11.svg';
+import s72 from './images/s72.svg';
+
+//video
+import v from './video/v.avi';
+import v2 from './video/v2.mp4';
 
 const LandingPage = () => {
 	return (
@@ -18,7 +27,9 @@ const LandingPage = () => {
 				<contaniner fluid>
 					<Row>
 						<Col>
-							<div> landing Page</div>
+							<video autoplay loop muted style={{ height: '100vh', width: '100%' }}>
+								<source src={v} type="video/avi" />
+							</video>
 						</Col>
 					</Row>
 				</contaniner>
@@ -51,7 +62,7 @@ const LandingPage = () => {
 				<contaniner fluid>
 					<S2div>
 						<Row>
-							<Col sm={{ order: 'first' }} md="6" className="Cols2textDiv" xs={{ order: 'last' }}>
+							<Col md="6" className="Cols2textDiv" xs={{ order: 'last' }} sm={{ order: 'first' }}>
 								<img src={s3} alt="o" className="img" />
 							</Col>
 							<Col lg="6" md="6" sm="12" className="Cols2textDiv">
@@ -99,7 +110,7 @@ const LandingPage = () => {
 				<contaniner fluid>
 					<S5div>
 						<Row>
-							<Col sm={{ order: 'first' }} md="6" className="s5i" xs={{ order: 'last' }}>
+							<Col className="s5i" xs={{ order: 'last' }} lg="6" md={{ order: 'first' }}>
 								<img src={s5} alt="o" className="img" />
 							</Col>
 							<Col
@@ -110,13 +121,140 @@ const LandingPage = () => {
 								style={{ display: 'flex', justifyContent: 'flex-end' }}
 							>
 								<div className="s5t">
-									<H1> AIROCO</H1>
-									<P1>#Nursing The Home</P1>
+									<H1 className="s5H1"> AIROCO</H1>
+									<P1 className="s5P1">#Nursing The Home</P1>
 									<PreBookButton> Pre-Book Now</PreBookButton>
+									<div className="underline" />
 								</div>
 							</Col>
 						</Row>
 					</S5div>
+				</contaniner>
+			</section>
+			<section id="section6">
+				<contaniner fluid>
+					<S2div>
+						<Row>
+							<Col md="6" className="Cols2textDiv" xs={{ order: 'last' }}>
+								<img src={s6} alt="o" className="img" />
+							</Col>
+							<Col lg="6" md="6" sm="12" className="Cols2textDiv">
+								<div className="s2textDiv2">
+									<P2>Nature gives us everything we need</P2>
+									<P1>
+										Airoco is an innovative, natural product design to be just as effective at
+										cleaning th
+									</P1>
+									<P2>Nature gives us everything we need</P2>
+									<P1>
+										Airoco is an innovative, natural product design to be just as effective at
+										cleaning the air you breathe without the environmental
+									</P1>
+									<P2>Nature gives us everything we need</P2>
+									<P1>
+										Airoco is an innovative, natural product design to be just as effective at
+										cleaning the air you breathe without the environmental
+									</P1>
+									<PreBookButton> Pre-Book Now</PreBookButton>
+								</div>
+							</Col>
+						</Row>
+					</S2div>
+				</contaniner>
+			</section>
+
+			<section id="section7">
+				<Container fluid>
+					<Wrapper7>
+						<Row>
+							<Col md={4} className="row7">
+								<div className="div7">
+									<img src={s72} hight="70px" width="70px" className="iconImg" alt="0" />
+									<P2 style={{ color: 'white' }}> Lorem ipsum dolor sit, </P2>
+									<P1 style={{ color: 'white' }}>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt earum dolor
+										eveniet culpa vero adipisci ullam nemo sit illo ipsum.
+									</P1>
+								</div>
+							</Col>
+							<Col md={4} className="row7">
+								<div className="div7">
+									<img src={s72} hight="70px" width="70px" className="iconImg" alt="0" />
+									<P2 style={{ color: 'white' }}> Lorem ipsum dolor sit, </P2>
+									<P1 style={{ color: 'white' }}>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt earum dolor
+										eveniet culpa vero adipisci ullam nemo sit illo ipsum.
+									</P1>
+								</div>
+							</Col>
+							<Col md={4} className="row7">
+								<div className="div7">
+									<img src={s72} hight="70px" width="70px" className="iconImg" alt="0" />
+									<P2 style={{ color: 'white' }}> Lorem ipsum dolor sit, </P2>
+									<P1 style={{ color: 'white' }}>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt earum dolor
+										eveniet culpa vero adipisci ullam nemo sit illo ipsum.
+									</P1>
+								</div>
+							</Col>
+						</Row>
+					</Wrapper7>
+				</Container>
+			</section>
+			<section id="section6">
+				<contaniner fluid>
+					<S2div>
+						<Row>
+							<Col md="6" className="Cols2textDiv" xs={{ order: 'last' }}>
+								<img src={s6} alt="o" className="img" />
+							</Col>
+							<Col lg="6" md="6" sm="12" className="Cols2textDiv">
+								<div className="s2textDiv2">
+									<P2>Nature gives us everything we need</P2>
+									<P1>
+										Airoco is an innovative, natural product design to be just as effective at
+										cleaning th
+									</P1>
+									<P2>Nature gives us everything we need</P2>
+									<P1>
+										Airoco is an innovative, natural product design to be just as effective at
+										cleaning the air you breathe without the environmental
+									</P1>
+									<P2>Nature gives us everything we need</P2>
+									<P1>
+										Airoco is an innovative, natural product design to be just as effective at
+										cleaning the air you breathe without the environmental
+									</P1>
+									<PreBookButton> Pre-Book Now</PreBookButton>
+								</div>
+							</Col>
+						</Row>
+					</S2div>
+				</contaniner>
+			</section>
+
+			<section id="section11">
+				<contaniner fluid>
+					<Wrapper11>
+						<Row>
+							<Col md="6" className="Cols2textDiv" xs={{ order: 'last' }} sm={{ order: 'first' }}>
+								<img src={s11} alt="o" className="img" style={{ marginBottom: '40px' }} />
+							</Col>
+							<Col lg="6" md="6" sm="12" className="Cols2textDiv">
+								<div className="s2textDiv">
+									<H1 style={{ color: 'white' }}>Choose your desired from our collections</H1>
+									<P1 style={{ color: 'white' }}>
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+										Ipsum has been the
+									</P1>
+									<PreBookButton style={{ backgroundColor: 'white', color: '#35683e' }}>
+										{' '}
+										Pre-Book Now
+									</PreBookButton>
+								</div>
+							</Col>
+						</Row>
+					</Wrapper11>
 				</contaniner>
 			</section>
 		</React.Fragment>
