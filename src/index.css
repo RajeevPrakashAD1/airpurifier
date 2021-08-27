@@ -3,6 +3,7 @@
     --blue: #1d498d;
     --grey: rgba(0, 36, 91, 0.18);
     --font-black: #202020;
+    --green: #e7f5e6;
 }
 
 * {
@@ -19,16 +20,17 @@ body {
     font-family: "Helvetica Neue !important", Helvetica, Arial;
     line-height: 28px;
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .App {
     max-width: 1440px;
 }
 
-@media screen and (max-width: 380px) {
-    .App {
-        padding: 10px;
-    }
+*:focus {
+    outline: 0 !important;
 }
 
 .flexColumn {
@@ -46,7 +48,7 @@ body {
 }
 
 button:focus {
-    outline: none;
+    outline: none !important;
 }
 
 input,
