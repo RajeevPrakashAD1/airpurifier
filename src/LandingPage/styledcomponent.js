@@ -1,6 +1,15 @@
 import styled from 'styled-components';
 
-export const S2div = styled.div `
+export const Mynav = styled.div`
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 30px;
+
+	top: 10px;
+	background-color: black;
+`;
+
+export const S2div = styled.div`
 	padding: 40px 0px;
 
 	display: flex;
@@ -10,6 +19,7 @@ export const S2div = styled.div `
 
 	@media (max-width: 751px) {
 		flex-direction: column-reverse;
+		padding: 0px;
 	}
 
 	& .s2textDiv {
@@ -18,6 +28,7 @@ export const S2div = styled.div `
 		padding: 40px 0px;
 
 		@media (max-width: 751px) {
+			overflow: hidden;
 			margin-left: 0px;
 			margin-right: 0px;
 			text-align: center;
@@ -44,7 +55,7 @@ export const S2div = styled.div `
 	}
 `;
 
-export const S5div = styled.div `
+export const S5div = styled.div`
 	& .s5i {
 	}
 
@@ -95,7 +106,7 @@ export const S5div = styled.div `
 	}
 `;
 
-export const Wrapper7 = styled.div `
+export const Wrapper7 = styled.div`
 	margin: 0px 35px;
 	& .div7 {
 		color: white !important;
@@ -119,7 +130,7 @@ export const Wrapper7 = styled.div `
 	}
 `;
 
-export const Wrapper11 = styled.div `
+export const Wrapper11 = styled.div`
 	padding: 40px 0px;
 	max-height: 350px;
 
@@ -165,7 +176,80 @@ export const Wrapper11 = styled.div `
 	}
 `;
 
-export const PreBookButton = styled.button `
+export const Wrapper8 = styled.div`
+	backgroundColor: blue;
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	justify-content: center;
+
+	& .header8 {
+		text-align: center;
+	}
+
+	& .col8 {
+		max-width: 400px;
+		margin-left: 50px;
+	}
+
+	& .col82 {
+		margin-left: 100px;
+	}
+
+	& .col8i {
+		min-width: 400px;
+	}
+	& .row8 {
+		display: flex;
+		align-items: center;
+		padding: 20px;
+	}
+	& .img2 {
+		height: 500px;
+	}
+
+	@media (max-width: 1040px) {
+		& .img2 {
+			height: 500px;
+		}
+		& .col8 {
+			max-width: 500px;
+			width: 100% !important;
+			margin-left: 0px;
+		}
+
+		& .row8 {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			padding: 0px;
+		}
+
+		& .col82 {
+			margin-left: 0px;
+		}
+	}
+
+	@media (max-width: 500px) {
+		& .img2 {
+			height: 300px;
+		}
+		& .row8 {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+		& .col8 {
+			max-width: 300px;
+		}
+	}
+`;
+
+export const PreBookButton = styled.button`
 	background-color: #425c56;
 	border-color: #425c56;
 	padding: 5px 15px;
@@ -185,7 +269,7 @@ export const PreBookButton = styled.button `
 	}
 `;
 
-export const H1 = styled.p `
+export const H1 = styled.p`
 	font-style: normal;
 	font-weight: bold;
 	font-size: 36px;
@@ -202,7 +286,7 @@ export const H1 = styled.p `
 	}
 `;
 
-export const P1 = styled.p `
+export const P1 = styled.p`
 	font-style: normal;
 	font-weight: normal;
 	font-size: 16px;
@@ -218,7 +302,7 @@ export const P1 = styled.p `
 	}
 `;
 
-export const P2 = styled.p `
+export const P2 = styled.p`
 	font-style: normal;
 	font-weight: bold;
 	font-size: 20px;

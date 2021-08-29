@@ -5,7 +5,7 @@ import './landingPage.css';
 import ReactPlayer from 'react-player';
 
 //sdtyled components
-import { S2div, PreBookButton, H1, P1, S5div, P2, Wrapper7, Wrapper11 } from './styledcomponent';
+import { S2div, PreBookButton, H1, P1, S5div, P2, Wrapper7, Wrapper11, Wrapper8, Mynav } from './styledcomponent';
 
 //images
 import s2 from './images/s2.svg';
@@ -15,20 +15,45 @@ import s5 from './images/s5.svg';
 import s6 from './images/s6.svg';
 import s11 from './images/s11.svg';
 import s72 from './images/s72.svg';
+import s81 from './images/s81.svg';
+import s8m from './images/s8m.svg';
+import s8b from './images/s8b.svg';
+import logo from './images/logo.svg';
+import cart from './images/cart.svg';
 
 //video
-import v from './video/v.avi';
-import v2 from './video/v2.mp4';
+import v from './video/v.mp4';
+//mport v2 from './video/v2.mp4';
 
 const LandingPage = () => {
 	return (
 		<React.Fragment>
+			<Mynav>
+				<div>
+					<a href="/">
+						<img src={logo} height="40px" alt="logo" />
+						<P2 style={{ display: 'inline-block' }}>AIROCO</P2>
+					</a>
+				</div>
+
+				<div>
+					<a>
+						<P2 style={{ display: 'inline-block' }}>Pre-Order</P2>
+						<img src={cart} height="40px" alt="cart" />
+					</a>
+				</div>
+			</Mynav>
+
 			<section id="section1">
 				<contaniner fluid>
+					<div>
+						{' '}
+						<h1 className="videotext">Air OCO</h1>
+					</div>
 					<Row>
 						<Col>
-							<video autoplay loop muted style={{ height: '100vh', width: '100%' }}>
-								<source src={v} type="video/avi" />
+							<video autoPlay loop muted style={{ height: '100vh', width: '100vw' }}>
+								<source src={v} type="video/mp4" />
 							</video>
 						</Col>
 					</Row>
@@ -201,35 +226,68 @@ const LandingPage = () => {
 					</Wrapper7>
 				</Container>
 			</section>
-			<section id="section6">
+			<section id="section8">
 				<contaniner fluid>
-					<S2div>
-						<Row>
-							<Col md="6" className="Cols2textDiv" xs={{ order: 'last' }}>
-								<img src={s6} alt="o" className="img" />
+					<Wrapper8>
+						<div className="header8">
+							<H1> Benefits of Airoco </H1>
+							<P2>We believe in providing real benefits to our customers. </P2>
+						</div>
+						<Row className="row8">
+							<Col md={12} lg={3} className="col8">
+								<div>
+									<img height="30px" src={s81} alt="i" />
+									<P2>Reduce Pollution</P2>
+									<P1>
+										Startup Framework works fine on devices supporting Retina Desplay. Feel the
+										clarity!
+									</P1>
+								</div>
+								<div>
+									<P2>Reduce Pollution</P2>
+									<P1>
+										Startup Framework works fine on devices supporting Retina Desplay. Feel the
+										clarity!
+									</P1>
+								</div>
+								<div>
+									<P2>Reduce Pollution</P2>
+									<P1>
+										Startup Framework works fine on devices supporting Retina Desplay. Feel the
+										clarity!
+									</P1>
+								</div>
 							</Col>
-							<Col lg="6" md="6" sm="12" className="Cols2textDiv">
-								<div className="s2textDiv2">
-									<P2>Nature gives us everything we need</P2>
+							<Col md={12} lg={3} className="col8i">
+								<img src={s8m} alt="0" className="img2" />
+							</Col>
+
+							<Col md={12} lg={3} className="col8 col82">
+								<div>
+									<img height="30px" src={s81} alt="i" />
+									<P2>Reduce Pollution</P2>
 									<P1>
-										Airoco is an innovative, natural product design to be just as effective at
-										cleaning th
+										Startup Framework works fine on devices supporting Retina Desplay. Feel the
+										clarity!
 									</P1>
-									<P2>Nature gives us everything we need</P2>
+								</div>
+								<div>
+									<P2>Reduce Pollution</P2>
 									<P1>
-										Airoco is an innovative, natural product design to be just as effective at
-										cleaning the air you breathe without the environmental
+										Startup Framework works fine on devices supporting Retina Desplay. Feel the
+										clarity!
 									</P1>
-									<P2>Nature gives us everything we need</P2>
+								</div>
+								<div>
+									<P2>Reduce Pollution</P2>
 									<P1>
-										Airoco is an innovative, natural product design to be just as effective at
-										cleaning the air you breathe without the environmental
+										Startup Framework works fine on devices supporting Retina Desplay. Feel the
+										clarity!
 									</P1>
-									<PreBookButton> Pre-Book Now</PreBookButton>
 								</div>
 							</Col>
 						</Row>
-					</S2div>
+					</Wrapper8>
 				</contaniner>
 			</section>
 
