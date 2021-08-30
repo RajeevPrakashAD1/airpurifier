@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './landingPage.css';
 import Slider from 'react-slick';
-
+import { Link } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 
 //sdtyled components
@@ -12,6 +12,7 @@ import { S2div, PreBookButton, H1, P1, S5div, P2, Wrapper7, Wrapper11, Wrapper8,
 import FacebookIcon from '@material-ui/icons/Facebook';
 
 //images
+import s9 from './images/s9.svg'
 import s2 from './images/s2.svg';
 import s3 from './images/s3.svg';
 import s4 from './images/s4.svg';
@@ -30,6 +31,18 @@ import v from './video/v.mp4';
 //mport v2 from './video/v2.mp4';
 
 const LandingPage = () => {
+
+	const settings = {
+		className: "center",
+		centerMode: true,
+		infinite: true,
+		
+		centerPadding: "0",
+		slidesToShow: 3,
+		speed: 500
+	  };
+
+
 	return (
 		<React.Fragment>
 			<div className="wrapper">
@@ -49,20 +62,14 @@ const LandingPage = () => {
 					</div>
 				</Mynav> */}
 
-				{/* <section id="section1">
-					<div class="yt-container">
-						<iframe
-							frameborder="0"
-							allowfullscreen="1"
-							allow="autoplay"
-							title="YouTube video player"
-							src={v}
-							controls={0}
-							//id="widget2"
-							// data-gtm-yt-inspected-1_25="true"
-						/>
-					</div>
-				</section> */}
+			<section id="section1">
+				
+			<div class="yt-container">
+    <iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    title="YouTube video player"
+     width="640" height="360" 
+     src={v} id="widget2" data-gtm-yt-inspected-1_25="true"></iframe></div>
+				</section> 
 
 				<section id="section2">
 					<Container fluid>
@@ -76,7 +83,8 @@ const LandingPage = () => {
 											Creating healthier and happier environments with a new type of purifier,
 											inspired by nature and powered by NASA technology.
 										</P1>
-										<PreBookButton> Pre-Book Now</PreBookButton>
+										<PreBookButton>
+											Pre-Book Now </PreBookButton>
 									</div>
 								</Col>
 
@@ -295,6 +303,59 @@ const LandingPage = () => {
 					</contaniner>
 				</section>
 
+				<section className="section9">
+					<div className="section9-content">
+
+					
+					<h2>Bring nature home!</h2>
+					<p> We believe in providing real benefits to our customers.</p>
+					</div>
+
+					<div className="section9-button">
+						<PreBookButton> Pre-Book Now</PreBookButton>
+						</div>
+				</section>
+
+
+
+			{/*	<div className="section10">
+		
+			
+		<h2>Designed to be the best looking filter around</h2>
+	<Slider {...settings}>
+
+
+  <div className="left-img">
+	  <img src={sliderleft}></img>
+</div>
+
+
+<div className="mid-img">
+  <img src={slidermid}></img>
+  </div>
+
+
+
+  <div className="right-img">
+  <img src={sliderright}></img>
+  </div>
+  
+
+ 
+</Slider>
+
+	
+		
+	
+</div>
+
+
+			*/}
+
+
+
+
+
 				<section id="section11">
 					<contaniner fluid>
 						<Wrapper11>
@@ -319,7 +380,16 @@ const LandingPage = () => {
 						</Wrapper11>
 					</contaniner>
 				</section>
+
+
+
 {/** ANiket started */}
+
+
+
+
+
+
 				<footer class="footer-bs">
 					<div class="row">
 						<div class="col-md-3 footer-brand animated fadeInLeft">
@@ -386,7 +456,7 @@ const LandingPage = () => {
 							<div>
 								<ul className="footer-icons">
 									<li>
-										<a href="#" target="_blank">
+		 								<a href="#" target="_blank">
 											<i class="fab fa-twitter" />
 										</a>
 									</li>
