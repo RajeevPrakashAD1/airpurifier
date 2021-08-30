@@ -1,11 +1,15 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './landingPage.css';
+import Slider from 'react-slick';
 
 import ReactPlayer from 'react-player';
 
 //sdtyled components
 import { S2div, PreBookButton, H1, P1, S5div, P2, Wrapper7, Wrapper11, Wrapper8, Mynav } from './styledcomponent';
+
+//icons
+import FacebookIcon from '@material-ui/icons/Facebook';
 
 //images
 import s2 from './images/s2.svg';
@@ -28,293 +32,380 @@ import v from './video/v.mp4';
 const LandingPage = () => {
 	return (
 		<React.Fragment>
-			<Mynav>
-				<div>
-					<a href="/">
-						<img src={logo} height="40px" alt="logo" />
-						<P2 style={{ display: 'inline-block' }}>AIROCO</P2>
-					</a>
-				</div>
-
-				<div>
-					<a>
-						<P2 style={{ display: 'inline-block' }}>Pre-Order</P2>
-						<img src={cart} height="40px" alt="cart" />
-					</a>
-				</div>
-			</Mynav>
-
-			<section id="section1">
-				<contaniner fluid>
+			<div className="wrapper">
+				{/* <Mynav>
 					<div>
-						{' '}
-						<h1 className="videotext">Air OCO</h1>
+						<a href="/">
+							<img src={logo} height="40px" alt="logo" />
+							<P2 style={{ display: 'inline-block', color: 'white' }}>AIROCO</P2>
+						</a>
 					</div>
-					<Row>
-						<Col>
-							<video autoPlay loop muted style={{ height: '100vh', width: '100vw' }}>
-								<source src={v} type="video/mp4" />
-							</video>
-						</Col>
-					</Row>
-				</contaniner>
-			</section>
 
-			<section id="section2">
-				<Container fluid>
-					<S2div>
-						<Row>
-							<Col lg="6" md="6" sm="12" className="Cols2textDiv">
-								<div className="s2textDiv">
-									<P1> What do we do </P1>
-									<H1> Strategy. Design Content. Technology Development </H1>
-									<P1>
-										Creating healthier and happier environments with a new type of purifier,
-										inspired by nature and powered by NASA technology.
-									</P1>
-									<PreBookButton> Pre-Book Now</PreBookButton>
-								</div>
-							</Col>
+					<div>
+						<a>
+							<P2 style={{ display: 'inline-block', color: 'white' }}>Pre-Order</P2>
+							<img src={cart} height="40px" alt="cart" />
+						</a>
+					</div>
+				</Mynav> */}
 
-							<Col lg="6" md="6" className="Cols2textDiv">
-								<img src={s2} alt="o" className="img" />
-							</Col>
-						</Row>
-					</S2div>
-				</Container>
-			</section>
-			<section id="section3">
-				<contaniner fluid>
-					<S2div>
-						<Row>
-							<Col md="6" className="Cols2textDiv" xs={{ order: 'last' }} sm={{ order: 'first' }}>
-								<img src={s3} alt="o" className="img" />
-							</Col>
-							<Col lg="6" md="6" sm="12" className="Cols2textDiv">
-								<div className="s2textDiv">
-									<H1>Nature gives us everything we need</H1>
-									<P1>
-										Airoco is an innovative, natural product design to be just as effective at
-										cleaning the air you breathe without the environmental impact. Inspired by the
-										British countyrside, Airoco uses natural colours, textures and materials to
-										connect you with nature, whilist hidden within a wealth of features works hard
-										to keep your air clean.
-									</P1>
-									<PreBookButton> Pre-Book Now</PreBookButton>
-								</div>
-							</Col>
-						</Row>
-					</S2div>
-				</contaniner>
-			</section>
-			<section id="section4">
-				<contaniner fluid>
-					<S2div>
-						<Row>
-							<Col lg="6" md="6" sm="12" className="Cols2textDiv">
-								<div className="s2textDiv">
-									<H1>Is this the future of Air purifier?</H1>
-									<P1>
-										While it was just a TV show, that little speech at the beginning of the original
-										Star Trek show really did do a good job of capturing our feelings about space.
-										It is those feelings that drive our love of astronomy and our desire to learn
-										more and more about it.
-									</P1>
-									<PreBookButton> Pre-Book Now</PreBookButton>
-								</div>
-							</Col>
-							<Col lg="6" md="6" className="" style={{ display: 'flex', justifyContent: 'flex-end' }}>
-								<img src={s4} alt="o" width="90%" />
-							</Col>
-						</Row>
-					</S2div>
-				</contaniner>
-			</section>
+				{/* <section id="section1">
+					<div class="yt-container">
+						<iframe
+							frameborder="0"
+							allowfullscreen="1"
+							allow="autoplay"
+							title="YouTube video player"
+							src={v}
+							controls={0}
+							//id="widget2"
+							// data-gtm-yt-inspected-1_25="true"
+						/>
+					</div>
+				</section> */}
 
-			<section id="section5">
-				<contaniner fluid>
-					<S5div>
-						<Row>
-							<Col className="s5i" xs={{ order: 'last' }} lg="6" md={{ order: 'first' }}>
-								<img src={s5} alt="o" className="img" />
-							</Col>
-							<Col
-								lg="6"
-								md="6"
-								sm="12"
-								className="s5c"
-								style={{ display: 'flex', justifyContent: 'flex-end' }}
-							>
-								<div className="s5t">
-									<H1 className="s5H1"> AIROCO</H1>
-									<P1 className="s5P1">#Nursing The Home</P1>
-									<PreBookButton> Pre-Book Now</PreBookButton>
-									<div className="underline" />
-								</div>
-							</Col>
-						</Row>
-					</S5div>
-				</contaniner>
-			</section>
-			<section id="section6">
-				<contaniner fluid>
-					<S2div>
-						<Row>
-							<Col md="6" className="Cols2textDiv" xs={{ order: 'last' }}>
-								<img src={s6} alt="o" className="img" />
-							</Col>
-							<Col lg="6" md="6" sm="12" className="Cols2textDiv">
-								<div className="s2textDiv2">
-									<P2>Nature gives us everything we need</P2>
-									<P1>
-										Airoco is an innovative, natural product design to be just as effective at
-										cleaning th
-									</P1>
-									<P2>Nature gives us everything we need</P2>
-									<P1>
-										Airoco is an innovative, natural product design to be just as effective at
-										cleaning the air you breathe without the environmental
-									</P1>
-									<P2>Nature gives us everything we need</P2>
-									<P1>
-										Airoco is an innovative, natural product design to be just as effective at
-										cleaning the air you breathe without the environmental
-									</P1>
-									<PreBookButton> Pre-Book Now</PreBookButton>
-								</div>
-							</Col>
-						</Row>
-					</S2div>
-				</contaniner>
-			</section>
+				<section id="section2">
+					<Container fluid>
+						<S2div>
+							<Row>
+								<Col lg="6" md="6" sm="12" className="Cols2textDiv">
+									<div className="s2textDiv">
+										<P1> What do we do </P1>
+										<H1> Strategy. Design Content. Technology Development </H1>
+										<P1>
+											Creating healthier and happier environments with a new type of purifier,
+											inspired by nature and powered by NASA technology.
+										</P1>
+										<PreBookButton> Pre-Book Now</PreBookButton>
+									</div>
+								</Col>
 
-			<section id="section7">
-				<Container fluid>
-					<Wrapper7>
-						<Row>
-							<Col md={4} className="row7">
-								<div className="div7">
-									<img src={s72} hight="70px" width="70px" className="iconImg" alt="0" />
-									<P2 style={{ color: 'white' }}> Lorem ipsum dolor sit, </P2>
-									<P1 style={{ color: 'white' }}>
-										Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt earum dolor
-										eveniet culpa vero adipisci ullam nemo sit illo ipsum.
-									</P1>
-								</div>
-							</Col>
-							<Col md={4} className="row7">
-								<div className="div7">
-									<img src={s72} hight="70px" width="70px" className="iconImg" alt="0" />
-									<P2 style={{ color: 'white' }}> Lorem ipsum dolor sit, </P2>
-									<P1 style={{ color: 'white' }}>
-										Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt earum dolor
-										eveniet culpa vero adipisci ullam nemo sit illo ipsum.
-									</P1>
-								</div>
-							</Col>
-							<Col md={4} className="row7">
-								<div className="div7">
-									<img src={s72} hight="70px" width="70px" className="iconImg" alt="0" />
-									<P2 style={{ color: 'white' }}> Lorem ipsum dolor sit, </P2>
-									<P1 style={{ color: 'white' }}>
-										Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt earum dolor
-										eveniet culpa vero adipisci ullam nemo sit illo ipsum.
-									</P1>
-								</div>
-							</Col>
-						</Row>
-					</Wrapper7>
-				</Container>
-			</section>
-			<section id="section8">
-				<contaniner fluid>
-					<Wrapper8>
-						<div className="header8">
-							<H1> Benefits of Airoco </H1>
-							<P2>We believe in providing real benefits to our customers. </P2>
+								<Col lg="6" md="6" className="Cols2textDiv">
+									<img src={s2} alt="o" className="img" />
+								</Col>
+							</Row>
+						</S2div>
+					</Container>
+				</section>
+				<section id="section3">
+					<contaniner fluid>
+						<S2div>
+							<Row>
+								<Col md="6" className="Cols2textDiv" xs={{ order: 'last' }} sm={{ order: 'first' }}>
+									<img src={s3} alt="o" className="img" />
+								</Col>
+								<Col lg="6" md="6" sm="12" className="Cols2textDiv">
+									<div className="s2textDiv">
+										<H1>Nature gives us everything we need</H1>
+										<P1>
+											Airoco is an innovative, natural product design to be just as effective at
+											cleaning the air you breathe without the environmental impact. Inspired by
+											the British countyrside, Airoco uses natural colours, textures and materials
+											to connect you with nature, whilist hidden within a wealth of features works
+											hard to keep your air clean.
+										</P1>
+										<PreBookButton> Pre-Book Now</PreBookButton>
+									</div>
+								</Col>
+							</Row>
+						</S2div>
+					</contaniner>
+				</section>
+				<section id="section4">
+					<contaniner fluid>
+						<S2div>
+							<Row>
+								<Col lg="6" md="6" sm="12" className="Cols2textDiv">
+									<div className="s2textDiv">
+										<H1>Is this the future of Air purifier?</H1>
+										<P1>
+											While it was just a TV show, that little speech at the beginning of the
+											original Star Trek show really did do a good job of capturing our feelings
+											about space. It is those feelings that drive our love of astronomy and our
+											desire to learn more and more about it.
+										</P1>
+										<PreBookButton> Pre-Book Now</PreBookButton>
+									</div>
+								</Col>
+								<Col lg="6" md="6" className="" style={{ display: 'flex', justifyContent: 'flex-end' }}>
+									<img src={s4} alt="o" width="90%" />
+								</Col>
+							</Row>
+						</S2div>
+					</contaniner>
+				</section>
+
+				<section id="section5">
+					<contaniner fluid>
+						<S5div>
+							<Row>
+								<Col className="s5i" xs={{ order: 'last' }} lg="6" md={{ order: 'first' }}>
+									<img src={s5} alt="o" className="img" />
+								</Col>
+								<Col
+									lg="6"
+									md="6"
+									sm="12"
+									className="s5c"
+									style={{ display: 'flex', justifyContent: 'flex-end' }}
+								>
+									<div className="s5t">
+										<H1 className="s5H1"> AIROCO</H1>
+										<P1 className="s5P1">#Nursing The Home</P1>
+										<PreBookButton> Pre-Book Now</PreBookButton>
+										<div className="underline" />
+									</div>
+								</Col>
+							</Row>
+						</S5div>
+					</contaniner>
+				</section>
+				<section id="section6">
+					<contaniner fluid>
+						<S2div>
+							<Row>
+								<Col md="6" className="Cols2textDiv" xs={{ order: 'last' }}>
+									<img src={s6} alt="o" className="img" />
+								</Col>
+								<Col lg="6" md="6" sm="12" className="Cols2textDiv">
+									<div className="s2textDiv2">
+										<P2>Nature gives us everything we need</P2>
+										<P1>
+											Airoco is an innovative, natural product design to be just as effective at
+											cleaning th
+										</P1>
+										<P2>Nature gives us everything we need</P2>
+										<P1>
+											Airoco is an innovative, natural product design to be just as effective at
+											cleaning the air you breathe without the environmental
+										</P1>
+										<P2>Nature gives us everything we need</P2>
+										<P1>
+											Airoco is an innovative, natural product design to be just as effective at
+											cleaning the air you breathe without the environmental
+										</P1>
+										<PreBookButton> Pre-Book Now</PreBookButton>
+									</div>
+								</Col>
+							</Row>
+						</S2div>
+					</contaniner>
+				</section>
+
+				<section id="section7">
+					<Container fluid>
+						<Wrapper7>
+							<Row>
+								<Col md={4} className="row7">
+									<div className="div7">
+										<img src={s72} hight="70px" width="70px" className="iconImg" alt="0" />
+										<P2 style={{ color: 'white' }}> Lorem ipsum dolor sit, </P2>
+										<P1 style={{ color: 'white' }}>
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt earum
+											dolor eveniet culpa vero adipisci ullam nemo sit illo ipsum.
+										</P1>
+									</div>
+								</Col>
+								<Col md={4} className="row7">
+									<div className="div7">
+										<img src={s72} hight="70px" width="70px" className="iconImg" alt="0" />
+										<P2 style={{ color: 'white' }}> Lorem ipsum dolor sit, </P2>
+										<P1 style={{ color: 'white' }}>
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt earum
+											dolor eveniet culpa vero adipisci ullam nemo sit illo ipsum.
+										</P1>
+									</div>
+								</Col>
+								<Col md={4} className="row7">
+									<div className="div7">
+										<img src={s72} hight="70px" width="70px" className="iconImg" alt="0" />
+										<P2 style={{ color: 'white' }}> Lorem ipsum dolor sit, </P2>
+										<P1 style={{ color: 'white' }}>
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt earum
+											dolor eveniet culpa vero adipisci ullam nemo sit illo ipsum.
+										</P1>
+									</div>
+								</Col>
+							</Row>
+						</Wrapper7>
+					</Container>
+				</section>
+				<section id="section8">
+					<contaniner fluid>
+						<Wrapper8>
+							<div className="header8">
+								<H1> Benefits of Airoco </H1>
+								<P2>We believe in providing real benefits to our customers. </P2>
+							</div>
+							<Row className="row8">
+								<Col md={12} lg={3} className="col8">
+									<div>
+										<img height="30px" src={s81} alt="i" />
+										<P2>Reduce Pollution</P2>
+										<P1>
+											Startup Framework works fine on devices supporting Retina Desplay. Feel the
+											clarity!
+										</P1>
+									</div>
+									<div>
+										<P2>Reduce Pollution</P2>
+										<P1>
+											Startup Framework works fine on devices supporting Retina Desplay. Feel the
+											clarity!
+										</P1>
+									</div>
+									<div>
+										<P2>Reduce Pollution</P2>
+										<P1>
+											Startup Framework works fine on devices supporting Retina Desplay. Feel the
+											clarity!
+										</P1>
+									</div>
+								</Col>
+								<Col md={12} lg={3} className="col8i">
+									<img src={s8m} alt="0" className="img2" />
+								</Col>
+
+								<Col md={12} lg={3} className="col8 col82">
+									<div>
+										<img height="30px" src={s81} alt="i" />
+										<P2>Reduce Pollution</P2>
+										<P1>
+											Startup Framework works fine on devices supporting Retina Desplay. Feel the
+											clarity!
+										</P1>
+									</div>
+									<div>
+										<P2>Reduce Pollution</P2>
+										<P1>
+											Startup Framework works fine on devices supporting Retina Desplay. Feel the
+											clarity!
+										</P1>
+									</div>
+									<div>
+										<P2>Reduce Pollution</P2>
+										<P1>
+											Startup Framework works fine on devices supporting Retina Desplay. Feel the
+											clarity!
+										</P1>
+									</div>
+								</Col>
+							</Row>
+						</Wrapper8>
+					</contaniner>
+				</section>
+
+				<section id="section11">
+					<contaniner fluid>
+						<Wrapper11>
+							<Row>
+								<Col md="6" className="Cols2textDiv" xs={{ order: 'last' }} sm={{ order: 'first' }}>
+									<img src={s11} alt="o" className="img" style={{ marginBottom: '40px' }} />
+								</Col>
+								<Col lg="6" md="6" sm="12" className="Cols2textDiv">
+									<div className="s2textDiv">
+										<H1 style={{ color: 'white' }}>Choose your desired from our collections</H1>
+										<P1 style={{ color: 'white' }}>
+											Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+											Lorem Ipsum has been the
+										</P1>
+										<PreBookButton style={{ backgroundColor: 'white', color: '#35683e' }}>
+											{' '}
+											Pre-Book Now
+										</PreBookButton>
+									</div>
+								</Col>
+							</Row>
+						</Wrapper11>
+					</contaniner>
+				</section>
+
+				<footer class="footer-bs">
+					<div class="row">
+						<div class="col-md-3 footer-brand animated fadeInLeft">
+							<img src={logo} /> <h2 style={{ display: 'inline-block' }}>AIROCO</h2>
+							<div className="" style={{ width: '220px' }}>
+								<p>Be sure to take a look at our Terms of Use and Privacy Policy</p>
+							</div>
 						</div>
-						<Row className="row8">
-							<Col md={12} lg={3} className="col8">
-								<div>
-									<img height="30px" src={s81} alt="i" />
-									<P2>Reduce Pollution</P2>
-									<P1>
-										Startup Framework works fine on devices supporting Retina Desplay. Feel the
-										clarity!
-									</P1>
-								</div>
-								<div>
-									<P2>Reduce Pollution</P2>
-									<P1>
-										Startup Framework works fine on devices supporting Retina Desplay. Feel the
-										clarity!
-									</P1>
-								</div>
-								<div>
-									<P2>Reduce Pollution</P2>
-									<P1>
-										Startup Framework works fine on devices supporting Retina Desplay. Feel the
-										clarity!
-									</P1>
-								</div>
-							</Col>
-							<Col md={12} lg={3} className="col8i">
-								<img src={s8m} alt="0" className="img2" />
-							</Col>
+						<div class="col-md-5 footer-nav animated fadeInUp">
+							<div class="col-md-6">
+								<h4>NAVIGATION</h4>
+								<ul class="pages">
+									<li>
+										<a href="#">Home</a>
+									</li>
+									<li>
+										<a href="#">Product</a>
+									</li>
+									<li>
+										<a href="#">blog</a>
+									</li>
+									<li>
+										<a href="#">plants</a>
+									</li>
+								</ul>
+							</div>
 
-							<Col md={12} lg={3} className="col8 col82">
-								<div>
-									<img height="30px" src={s81} alt="i" />
-									<P2>Reduce Pollution</P2>
-									<P1>
-										Startup Framework works fine on devices supporting Retina Desplay. Feel the
-										clarity!
-									</P1>
-								</div>
-								<div>
-									<P2>Reduce Pollution</P2>
-									<P1>
-										Startup Framework works fine on devices supporting Retina Desplay. Feel the
-										clarity!
-									</P1>
-								</div>
-								<div>
-									<P2>Reduce Pollution</P2>
-									<P1>
-										Startup Framework works fine on devices supporting Retina Desplay. Feel the
-										clarity!
-									</P1>
-								</div>
-							</Col>
-						</Row>
-					</Wrapper8>
-				</contaniner>
-			</section>
+							<div class="col-md-6">
+								<h4>ABOUT US</h4>
+								<ul class="pages">
+									<li>
+										<a href="#">ABOUT US</a>
+									</li>
+									<li>
+										<a href="#">CONTACT</a>
+									</li>
+									<li>
+										<a href="#">FAQ</a>
+									</li>
+									<li>
+										<a href="#">PRIVACY POLICY</a>
+									</li>
+									<li>
+										<a href="#">TERMS & CONDITIONS</a>
+									</li>
+								</ul>
+							</div>
+						</div>
 
-			<section id="section11">
-				<contaniner fluid>
-					<Wrapper11>
-						<Row>
-							<Col md="6" className="Cols2textDiv" xs={{ order: 'last' }} sm={{ order: 'first' }}>
-								<img src={s11} alt="o" className="img" style={{ marginBottom: '40px' }} />
-							</Col>
-							<Col lg="6" md="6" sm="12" className="Cols2textDiv">
-								<div className="s2textDiv">
-									<H1 style={{ color: 'white' }}>Choose your desired from our collections</H1>
-									<P1 style={{ color: 'white' }}>
-										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-										Ipsum has been the
-									</P1>
-									<PreBookButton style={{ backgroundColor: 'white', color: '#35683e' }}>
-										{' '}
-										Pre-Book Now
-									</PreBookButton>
+						<div class="col-md-4 footer-ns animated fadeInRight">
+							<h4>Subscribe our Newsletter</h4>
+
+							<p>
+								<div class="input-group">
+									<input type="text" class="form-control" placeholder="Your email..." />
+									<span class="input-group-btn">
+										<button class="btn btn-default" type="button">
+											SUBSCRIBE
+										</button>
+									</span>
 								</div>
-							</Col>
-						</Row>
-					</Wrapper11>
-				</contaniner>
-			</section>
+							</p>
+
+							<div>
+								<ul className="footer-icons">
+									<li>
+										<a href="#" target="_blank">
+											<i class="fab fa-twitter" />
+										</a>
+									</li>
+									<li>
+										<a href="#" target="_blank">
+											<i class="fab fa-facebook" />
+										</a>
+									</li>
+									<li>
+										<a href="#" target="_blank">
+											<i class="fab fa-google-plus-g" />
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
 		</React.Fragment>
 	);
 };

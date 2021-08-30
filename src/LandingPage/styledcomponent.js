@@ -1,15 +1,22 @@
 import styled from 'styled-components';
 
-export const Mynav = styled.div`
+export const Mynav = styled.div `
 	display: flex;
 	justify-content: space-between;
 	padding: 10px 30px;
 
 	top: 10px;
 	background-color: black;
+	position: relative;
+	top: 20px;
+	z-index: 1000;
+
+	& .navdiv {
+		margin-right: 90%;
+	}
 `;
 
-export const S2div = styled.div`
+export const S2div = styled.div `
 	padding: 40px 0px;
 
 	display: flex;
@@ -55,7 +62,7 @@ export const S2div = styled.div`
 	}
 `;
 
-export const S5div = styled.div`
+export const S5div = styled.div `
 	& .s5i {
 	}
 
@@ -106,7 +113,7 @@ export const S5div = styled.div`
 	}
 `;
 
-export const Wrapper7 = styled.div`
+export const Wrapper7 = styled.div `
 	margin: 0px 35px;
 	& .div7 {
 		color: white !important;
@@ -130,7 +137,7 @@ export const Wrapper7 = styled.div`
 	}
 `;
 
-export const Wrapper11 = styled.div`
+export const Wrapper11 = styled.div `
 	padding: 40px 0px;
 	max-height: 350px;
 
@@ -176,7 +183,7 @@ export const Wrapper11 = styled.div`
 	}
 `;
 
-export const Wrapper8 = styled.div`
+export const Wrapper8 = styled.div `
 	backgroundColor: blue;
 
 	display: flex;
@@ -249,7 +256,7 @@ export const Wrapper8 = styled.div`
 	}
 `;
 
-export const PreBookButton = styled.button`
+export const PreBookButton = styled.button `
 	background-color: #425c56;
 	border-color: #425c56;
 	padding: 5px 15px;
@@ -269,7 +276,7 @@ export const PreBookButton = styled.button`
 	}
 `;
 
-export const H1 = styled.p`
+export const H1 = styled.p `
 	font-style: normal;
 	font-weight: bold;
 	font-size: 36px;
@@ -286,7 +293,7 @@ export const H1 = styled.p`
 	}
 `;
 
-export const P1 = styled.p`
+export const P1 = styled.p `
 	font-style: normal;
 	font-weight: normal;
 	font-size: 16px;
@@ -302,7 +309,7 @@ export const P1 = styled.p`
 	}
 `;
 
-export const P2 = styled.p`
+export const P2 = styled.p `
 	font-style: normal;
 	font-weight: bold;
 	font-size: 20px;
