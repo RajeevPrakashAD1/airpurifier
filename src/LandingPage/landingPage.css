@@ -1,7 +1,5 @@
 /* bootstrap backchodi */
 
-
-
 #section1 {
     /* margin-bottom: -11%; */
     /* height: 100vh; */
@@ -24,11 +22,17 @@
     top: 5px;
 }
 
-.cart {
-   margin-left: 10px;
-    height:30px;
-   
+@media (max-width: 500px) {
+    .logo-text {
+        top: 1px;
+    }
 }
+
+.cart {
+    margin-left: 10px;
+    height: 30px;
+}
+
 @media (max-width: 500px) {
     .cart {
         height: 30px !important;
@@ -70,6 +74,12 @@
     color: white;
 }
 
+@media (min-width: 768px) {
+    .nav-button {
+        top: 1%;
+    }
+}
+
 .nav-button :hover {
     background-color: white;
     color: black;
@@ -101,8 +111,14 @@ iframe {
     display: block;
 }
 
-video::-webkit-media-controls-timeline {
-    display: none;
+#vid {
+    margin-left: 20px;
+}
+
+@media (max-width: 500px) {
+    #vid {
+        margin-left: 20%;
+    }
 }
 
 
@@ -703,21 +719,16 @@ select {
     background-position: bottom left;
 }
 
-@media (min-width:300px) and (max-width: 900px)  {
+@media (min-width: 300px) and (max-width: 900px) {
     .footer-bs {
         padding: 20px 20px;
     }
-
-    .section9{
+    .section9 {
         background-image: url('./images/s9.svg');
         background-repeat: no-repeat;
-       margin: 0;
-       height: 377px ;
-     
-        
-        
+        margin: 0;
+        height: 377px;
     }
-   
 }
 
 .footer-bs .footer-brand,
@@ -851,121 +862,104 @@ select {
     .footer-bs .footer-ns {
         border-left: solid 1px rgba(255, 255, 255, 0.10);
     }
-
-
-
 }
 
 .footer-icons {
     display: flex;
-  
     list-style-type: none;
 }
-.footer-icons li{
+
+.footer-icons li {
     margin-top: 40px;
     margin-right: 25px;
     font-size: 18px;
 }
 
 .footer-icons li a {
-   color: rgba(66, 92, 86, 1);
+    color: rgba(66, 92, 86, 1);
 }
 
 
 /*sectio 9 */
 
-.section9{
+.section9 {
     background-image: url('./images/s9.svg');
     background-repeat: no-repeat;
-   margin: 70px 50px;
-   height: 377px;
-  position: relative;
-    
-    
+    margin: 70px 50px;
+    height: 377px;
+    position: relative;
 }
-.section9-content{
+
+.section9-content {
     position: absolute;
     left: 400px;
-    top:60px;
-   
+    top: 60px;
 }
-.section9 h2{
-  text-align: center;
-    
+
+.section9 h2 {
+    text-align: center;
     font-size: 45px;
     color: rgba(66, 92, 86, 1);
-   
-   line-height: 46px;
+    line-height: 46px;
 }
-.section9 p{
-  
+
+.section9 p {
     font-size: 25px;
     font-weight: 300;
     color: rgba(66, 92, 86, 1);
-  
-   line-height: 46px;
+    line-height: 46px;
 }
-.section9-button{
-    position: absolute;
-  bottom: 100px;
- display: flex;
-align-items: center;
-left: 600px;
-justify-content: center;
 
+.section9-button {
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    align-items: center;
+    left: 600px;
+    justify-content: center;
 }
-.section9 button{
+
+.section9 button {
     align-items: center;
     vertical-align: top;
     width: 170px;
 }
 
 @media only screen and (max-width: 900px) {
-
-    .section9{
+    .section9 {
         background-image: url('./images/s9.svg');
         background-repeat: no-repeat;
-       margin: 0 !important;
-       height: 377px;
-      position: relative;
-       background-position: bottom right; 
-       object-fit: contain;
+        margin: 0 !important;
+        height: 377px;
+        position: relative;
+        background-position: bottom right;
+        object-fit: contain;
     }
-    .section9-content{
+    .section9-content {
         position: absolute;
         left: 20px !important;
-        top:60px;
-
-       
+        top: 60px;
     }
-    .section9 h2{
-      text-align: center;
-        
+    .section9 h2 {
+        text-align: center;
         font-size: 35px;
         font-weight: 600;
         color: rgba(66, 92, 86, 1);
-       
-       line-height: 46px;
+        line-height: 46px;
     }
-    .section9 p{
-      
+    .section9 p {
         font-size: 25px;
         font-weight: 300;
         color: rgba(66, 92, 86, 1);
-      
-       line-height: 26px;
+        line-height: 26px;
     }
-    .section9-button{
+    .section9-button {
         position: absolute;
-      bottom: 100px;
-      left: 120px;
-     
+        bottom: 100px;
+        left: 120px;
     }
-    .section9 button{
+    .section9 button {
         align-items: center;
         vertical-align: top;
     }
-    
 }
-
-

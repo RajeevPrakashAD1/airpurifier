@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-
-
-
-
 export const Mynav = styled.div `
 	display: flex;
 	justify-content: space-between;
@@ -31,7 +27,7 @@ export const S2div = styled.div `
 
 	@media (max-width: 751px) {
 		flex-direction: column-reverse;
-		padding: 0px;
+		padding: 30px 20px;
 	}
 
 	& .s2textDiv {
@@ -69,6 +65,9 @@ export const S2div = styled.div `
 
 export const S5div = styled.div `
 	& .s5i {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	& .s5c {
