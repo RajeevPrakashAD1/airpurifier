@@ -1,21 +1,26 @@
 import styled from 'styled-components';
 
+
+
+
+
 export const Mynav = styled.div `
 	display: flex;
 	justify-content: space-between;
 	padding: 10px 30px;
 
-	top: 10px;
-	background-color: black;
-	position: relative;
 	top: 20px;
 	z-index: 1000;
 
 	& .navdiv {
 		margin-right: 90%;
 	}
-`;
 
+	@media (max-width: 500px) {
+		padding: 5px;
+		padding-top: 20px;
+	}
+`;
 export const S2div = styled.div `
 	padding: 40px 0px;
 

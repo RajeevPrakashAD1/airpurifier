@@ -1,9 +1,82 @@
 /* bootstrap backchodi */
 
+
+
 #section1 {
     /* margin-bottom: -11%; */
     /* height: 100vh; */
-    background-color: red;
+    background: url(./images/fbg.svg);
+    background-position: center top;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    position: relative;
+    bottom: 80px;
+    z-index: -1;
+    margin-bottom: -80px;
+}
+
+.logo-text {
+    position: relative;
+    top: 5px;
+}
+
+.cart {
+   margin-left: 10px;
+    height:30px;
+   
+}
+@media (max-width: 500px) {
+    .cart {
+        height: 30px !important;
+    }
+}
+
+.title {
+    color: white;
+    font-size: 18rem;
+    position: relative;
+    top: 35px;
+    margin-bottom: 150px;
+}
+
+@media (max-width: 500px) {
+    .title {
+        font-size: 7rem;
+    }
+}
+
+.tdiv {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    width: 77%;
+    justify-content: space-between;
+    margin-left: 5%;
+}
+
+.nav-button {
+    position: relative;
+    top: 15%;
+    width: 20%;
+    min-width: 200px;
+    height: 10%;
+    border-radius: 20px;
+    font-size: 3rem;
+    border-color: white;
+    color: white;
+}
+
+.nav-button :hover {
+    background-color: white;
+    color: black;
+}
+
+.col {
+    padding: 0px;
 }
 
 .col {
@@ -855,7 +928,7 @@ justify-content: center;
        margin: 0 !important;
        height: 377px;
       position: relative;
-        
+       background-position: bottom right; 
        object-fit: contain;
     }
     .section9-content{
