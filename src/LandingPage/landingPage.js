@@ -389,7 +389,7 @@ const LandingPage = () => {
 					</div>
 
 					<div className="section9-button">
-						<PreBookButton />
+						<PreBookButton timer="t" />
 					</div>
 				</section>
 				{/* 
@@ -449,6 +449,7 @@ const LandingPage = () => {
 											“In every walk with nature, one receives far more than he seeks.” So choose
 											the best for you. Choose AIROCO!
 										</P1>
+										<PreBookButton timer="y" />
 									</div>
 								</Col>
 							</Row>

@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import CountdownTimer from '../Components/CountdownTimer/CountdownTimer';
-const timeremaining = 1630489910497 + 18 * 24 * 60 * 60 * 1000;
-const PrebookButton2 = () => {
+const timeremaining = Date.now() + 18 * 24 * 60 * 60 * 1000;
+const PrebookButton2 = ({ timer }) => {
 	return (
 		<React.Fragment>
 			<Link to="/preorder">
-				<PreBookButton> PRE - BOOK NOW </PreBookButton> {' '}
-			</Link>{' '}
-			 <CountdownTimer countdownTimestampMs={timeremaining} /> {' '}
+				<PreBookButton> PRE - BOOK NOW </PreBookButton>{' '}
+			</Link>
+			{timer == 't' ? null : <CountdownTimer countdownTimestampMs={timeremaining} />}{' '}
 		</React.Fragment>
 	);
 };
@@ -23,6 +23,7 @@ const PreBookButton = styled.button`
 	color: white;
 	border: none;
 	border-radius: 5px;
+	margin-top: 30px;
 
 	&: hover {
 		background-color: #35683e !important;
