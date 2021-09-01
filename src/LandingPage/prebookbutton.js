@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-
+import CountdownTimer from '../Components/CountdownTimer/CountdownTimer';
+const timeremaining = 1630489910497 + 18 * 24 * 60 * 60 * 1000;
 const PrebookButton2 = () => {
 	return (
 		<React.Fragment>
 			<Link to="/preorder">
-				<PreBookButton> PRE-BOOK NOW </PreBookButton>
-			</Link>
+				<PreBookButton> PRE - BOOK NOW </PreBookButton> {' '}
+			</Link>{' '}
+			 <CountdownTimer countdownTimestampMs={timeremaining} /> {' '}
 		</React.Fragment>
 	);
 };
