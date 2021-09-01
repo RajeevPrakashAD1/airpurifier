@@ -112,7 +112,7 @@ const LandingPage = () => {
 				<section id="section1">
 					<div className="tdiv">
 						<div>
-							<h1 className="title">AIR </h1>
+							<h1 className="title">Rajeev</h1>
 						</div>
 						<div>
 							<h1 className="title">OCO</h1>
